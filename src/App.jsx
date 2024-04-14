@@ -5,8 +5,8 @@ import About from "./components/About";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Dishes from "./components/Dishes";
-import Reviews from "./components/Review";
 import Review from "./components/Review";
+import Youtube from "./components/Youtube";
 
 const App = () => {
   return (
@@ -18,12 +18,16 @@ const App = () => {
           <Home />
         </div>
 
-        <div id="dishes">
-          <Dishes />
-        </div>
-
         <div id="about">
           <About />
+        </div>
+
+        <div id="youtubeblogs">
+          <Youtube />
+        </div>
+
+        <div id="dishes">
+          <Dishes />
         </div>
 
         <div id="recommended">

@@ -5,7 +5,7 @@ import Button from "../layouts/Button";
 
 const DishesCard = (props) => {
   return (
-    <div className=" w-full lg:w-1/4 p-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg bg-whiteColor">
+    <div className=" w-full lg:w-1/3 p-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg bg-whiteColor">
       <img className=" rounded-xl" src={props.img} alt="img" style={{width: "100%",height: 230, objectFit: "cover"}}/>
       <div className=" space-y-4">
         <h3 className=" font-semibold text-center text-xl pt-6 text-brightColor">{props.title}</h3>
