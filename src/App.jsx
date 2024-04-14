@@ -10,7 +10,7 @@ import Review from "./components/Review";
 
 const App = () => {
   return (
-    <div>
+    <div >
       <Navbar />
 
       <main>
@@ -26,7 +26,7 @@ const App = () => {
           <About />
         </div>
 
-        <div id="menu">
+        <div id="recommended">
           <Menu />
         </div>
 

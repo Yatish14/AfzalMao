@@ -5,6 +5,7 @@ import Button from "../layouts/Button";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import AfzalLogoLong from "../attachments/Logo.png"
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -18,14 +19,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" fixed w-full">
+    <div className=" fixed w-full ">
       <div>
-        <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-whiteColor shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
           <div className=" flex flex-row items-center cursor-pointer">
-            <span>
+            {/* <span>
               <BiRestaurant size={32} />
             </span>
-            <h1 className=" text-xl font-semibold">FoodieWeb</h1>
+            <h1 className=" text-xl font-semibold">FoodieWeb</h1> */}
+            <img src={AfzalLogoLong} alt="AfzalMaoLogo" className="h-10 md:h-12 transform scale-125 md:scale-125"/>
           </div>
 
           <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
@@ -63,40 +65,18 @@ const Navbar = () => {
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Spicy
+                    Popular
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="dishes"
+                    to="recommended"
                     spy={true}
                     smooth={true}
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Tasty
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="dishes"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Delicious
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="dishes"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Crispy
+                    Recommended
                   </Link>
                 </li>
               </ul>
@@ -113,7 +93,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="menu"
+              to=""
               spy={true}
               smooth={true}
               duration={500}
@@ -132,10 +112,20 @@ const Navbar = () => {
               Reviews
             </Link>
 
+            <Link
+              to="contactus"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Contact
+            </Link>
+
             <Button title="Login" />
           </nav>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center text-brightColor">
             {menu ? (
               <AiOutlineClose size={25} onClick={handleChange} />
             ) : (
@@ -179,7 +169,7 @@ const Navbar = () => {
             About
           </Link>
           <Link
-            to="menu"
+            to=""
             spy={true}
             smooth={true}
             duration={500}
@@ -198,8 +188,18 @@ const Navbar = () => {
           >
             Reviews
           </Link>
+          <Link
+            to="contactus"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className=" hover:text-brightColor transition-all cursor-pointer"
+            onClick={closeMenu}
+          >
+            Contact
+          </Link>
 
-          <Button title="login" />
+          <Button title="Login" />
         </div>
       </div>
     </div>
